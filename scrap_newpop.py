@@ -1,3 +1,4 @@
+import os
 import csv
 import time
 from selenium import webdriver
@@ -53,7 +54,8 @@ except Exception as e:
 print(f"Encontradas {total_pages} páginas para scraping.")
 
 #Criar o arquivo CSV e escrever os cabeçalhos
-with open("mangas_newpop.csv", "w", newline="", encoding="utf-8") as csvfile:
+csv_path = os.path.join("Data", "mangas_newpop.csv")
+with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
      fieldnames = ["Título", "Preço Original", "Desconto", "Disponibilidade"]
      writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
      writer.writeheader()
