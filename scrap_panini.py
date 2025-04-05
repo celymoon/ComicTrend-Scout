@@ -50,7 +50,7 @@ print(f"🔍 Encontradas {total_paginas} páginas para scraping.")
 # 🔹 Criar o arquivo CSV e escrever os cabeçalhos
 csv_path = os.path.join("Data", "mangas_panini.csv")
 with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
-    fieldnames = ["Título", "Preço Original", "Desconto", "Disponibilidade", "Pré-venda"]
+    fieldnames = ["Título", "Preço Original", "Desconto", "Disponibilidade", "Pré-venda", "Link"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
 
@@ -79,6 +79,8 @@ with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
         for manga in mangas:
             title = manga.find("a", class_="product-item-link")
             title_text = title.text.strip() if title else "Título não encontrado"
+            manga_url = title['href'] if title else None
+
 
             
         # Encontrar preço com desconto (special-price → span.price)
@@ -98,7 +100,7 @@ with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
             status = manga.find("a", class_="bt-stock-unavailable")
             status_text = status.text.strip() if status else "Disponível"
 
-            print(f"{title_text}, {old_price_text}, {special_price_text}, {status_text}, {prevenda_text}")
+            print(f"{title_text}, {old_price_text}, {special_price_text}, {status_text}, {prevenda_text}, {manga_url}")
 
             # **Salvar os dados no CSV**
             writer.writerow({
@@ -106,7 +108,8 @@ with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
                 "Preço Original": old_price_text if old_price_text else "Não disponível",
                 "Desconto": special_price_text if special_price_text else "Sem desconto",
                 "Disponibilidade": status_text if status_text else "Disponível",
-                "Pré-venda": prevenda_text if prevenda_text else "Não"
+                "Pré-venda": prevenda_text if prevenda_text else "Não",
+                "Link": manga_url
             })
 
 # Fechar o navegador depois que tudo terminou

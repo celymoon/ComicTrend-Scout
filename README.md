@@ -1,33 +1,33 @@
-#   Projeto Comic Trend Scout   (Projeto em andamento)
+#   Projeto Comic Trend Scout
 
 ## Sobre o Projeto
-Este projeto tem como objetivo otimizar a gestão de estoque da Livraria Saber voltado para mangás e Histórias em Quadrinhos. Para isso será utilizado análise de dados para prever tendências de vendas e auxiliar na tomada de decisões estratégicas de reposição de estoque, além da prevenção de tendências utilizando Machine Learning NLP para análise de comportamento e popularidade. Para isso, combino dados internos da livraria com métricas externas de popularidade e tendências, como rankings, avaliações online e popularidade em redes sociais.
+Este projeto tem como objetivo otimizar a gestão de estoque da livraria, focado na análise de vendas e popularidade de mangás da editora Panini. A análise combina dados internos da livraria com métricas externas para identificar padrões de demanda, sugerir reposições estratégicas e evitar perdas de venda devido à falta de estoque.
+
 
 ##  Funcionalidades
--   Coleta de Dados: Extração de informações de vendas e estoque da livraria.
+- Coleta de Dados: Extração de informações de vendas e estoque da livraria.
 
--   Web Scraping: Coleta de métricas externas de editoras (NewPOP,Planet Mangá, JBC, Pipoca&Nanquim, Darkside), blogs e Streamings (myanimelist e Crunchyroll) para análise de popularidade.
+- Web Scraping: Coleta de métricas externas da Panini, incluindo ranking de popularidade e disponibilidade.
 
--   Análise de Tendências: Identificação de padrões de vendas e demanda futura ao análisar trend's na cidade local (arredores) e internet.
+- Análise de Tendências: Identificação de padrões de vendas e oportunidades de reposição.
 
--   Modelo Preditivo: Algoritmo para prever quais títulos têm maior probabilidade de venda.
-
--   Dashboard Interativo: Visualização dos insights gerados no Power BI.
+- Dashboard Interativo: Visualização de insights através de gráficos dinâmicos.
 
 ##  Dados Utilizados
 
 -   **Dados Internos:**
 
-    -   Histórico de compras e vendas do ano de 2022 a 2025
+- Histórico de compras e vendas de títulos da Panini na livraria.
 
-    -   Estoque atual de cada título disponível na Livraria
+- Estoque atual de cada mangá disponível.
 
-    -   Títulos em estoque na livraria que se encontram esgotados nas editoras e plataformas de e-commerce (Amazon e Shopee)
+- Disponibilidade e precificação dos produtos.
 
 -   **Dados Externos:**
 
-    -   Posição de mais vendidos das 5 editoras fornecedoras
-    -   avaliações dos títulos coletados via web scraping (myanimelist, Crunchyroll e Biblioteca Brasileira de Mangás)
+    -   Ranking de popularidade da editora Panini.
+
+    -   Disponibilidade dos títulos na editora.
 
 ##  Tecnologias Utilizadas
 
@@ -37,7 +37,7 @@ Este projeto tem como objetivo otimizar a gestão de estoque da Livraria Saber v
 
 -   **Banco de Dados:** PostgreSQL
 
--   **Data Visualization Tool:** Excel, Jupyter Notebook, Power BI
+-   **Data Visualization Tool:** Excel, Jupyter Notebook
 
 ##  Estrutura do Projeto
 
@@ -49,21 +49,49 @@ Este projeto tem como objetivo otimizar a gestão de estoque da Livraria Saber v
         │── 📁 dashboard          # Interface para visualização de insights
         │── README.md             # Documentação do projeto
 
-#   Status do Andamento do Projeto
-    Início do projeto: 24/03/2025 
-    previsão para finalização: 24/04/2025
-✅ Coleta e limpeza de dados internos </br>
-✅ Web scraping de dados externos </br>
-🔄 Desenvolvimento do modelo preditivo (em progresso) </br>
-🔄 Criação do dashboard (em progresso)
+#   Análises Realizadas
 
-##  Próximos Passos
+##  1. Top 10 Mangás Mais Vendidos na Livraria
 
--   Refinamento do modelo preditivo
+-   Destaque para os títulos mais vendidos, auxiliando na definição de reposições estratégicas.
 
--   Integração dos dados no dashboard interativo
+    ![Top 10 mais vendidos](Images\Top10maisvendidos.png)
 
--   Testes e validação da previsão de demanda
+
+##  2. Comparação de Demanda vs. Estoque
+
+-   Verificação do equilíbrio entre estoque disponível e a quantidade vendida de cada título.
+
+       ![Top 10 mais vendidos](Images\comparacaodemandaeestoque.png)
+
+
+##  3. Disponibilidade vs. Demanda
+
+-   Análise da disponibilidade dos mangás na Panini versus sua demanda na livraria.
+
+  ![Top 10 mais vendidos](Images\comparacaodemandaeestoque.png)
+
+##  4. Comparação do Ranking com as Vendas da Livraria
+
+-   Análise da relação entre os mangás mais populares da Panini e os mais vendidos na livraria.
+
+     ![Top 10 mais vendidos](Images\comparandorankpaninicomvendas.png)
+
+## Status do Projeto
+
+- ✅ Coleta e limpeza de dados internos
+- ✅ Web scraping dos dados da Panini
+- ✅ Desenvolvimento dos gráficos e análises
+- 🔄 Refinamento dos insights e otimização do dashboard
+
+![Top 10 mais vendidos](Images\dashboard.png)
+## Próximos Passos
+
+- Refinamento da análise para prever reposições futuras.
+ 
+- Integração dos dados em um banco de dados centralizado.
+
+- Testes para validação da estratégia de reposição.
 
 ##  Contribuições
 
