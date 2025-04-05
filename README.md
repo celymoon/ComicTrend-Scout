@@ -55,27 +55,27 @@ Este projeto tem como objetivo otimizar a gestão de estoque da livraria, focado
 
 -   Destaque para os títulos mais vendidos, auxiliando na definição de reposições estratégicas.
 
-    ![Top 10 mais vendidos](Images\Top10maisvendidos.png)
+    ![Top 10 mais vendidos](images\Top10maisvendidos.png)
 
 
 ##  2. Comparação de Demanda vs. Estoque
 
 -   Verificação do equilíbrio entre estoque disponível e a quantidade vendida de cada título.
 
-       ![Top 10 mais vendidos](Images\comparacaodemandaeestoque.png)
+       ![Top 10 mais vendidos](images\comparacaodemandaeestoque.png)
 
 
 ##  3. Disponibilidade vs. Demanda
 
 -   Análise da disponibilidade dos mangás na Panini versus sua demanda na livraria.
 
-  ![Top 10 mais vendidos](Images\comparacaodemandaeestoque.png)
+  ![Top 10 mais vendidos](images\comparacaodemandaeestoque.png)
 
 ##  4. Comparação do Ranking com as Vendas da Livraria
 
 -   Análise da relação entre os mangás mais populares da Panini e os mais vendidos na livraria.
 
-     ![Top 10 mais vendidos](Images\comparandorankpaninicomvendas.png)
+     ![Top 10 mais vendidos](images\comparandorankpaninicomvendas.png)
 
 ## Status do Projeto
 
@@ -84,7 +84,7 @@ Este projeto tem como objetivo otimizar a gestão de estoque da livraria, focado
 - ✅ Desenvolvimento dos gráficos e análises
 - 🔄 Refinamento dos insights e otimização do dashboard
 
-![Top 10 mais vendidos](Images\dashboard.png)
+![Top 10 mais vendidos](images\dashboard.png)
 ## Próximos Passos
 
 - Refinamento da análise para prever reposições futuras.
